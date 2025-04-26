@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  overflow-x: hidden;
+  
+  /* NEW: Background image for body */
+  background: url('bbb.jpg') center center/cover no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  padding: 50px;
+  border-radius: 10px;
+  border: 2px solid #39ff14; 
+  box-shadow:
+    0 0 10px #f01a1a,
+    0 0 20px #f01a1a,
+    0 0 30px #f01a1a,
+    0 0 40px #f01a1a;
+  text-align: center;
+  
+  /* NEW: Solid color or gradient background for container */
+  background: linear-gradient(
+    135deg,
+    #fbff2d, 
+    #ff5b10, 
+    #3438ff 
+  );
+  background-size: 300% 300%;
+  animation: tricolorShift 12s ease infinite;
+}
+
+/* Optional: smooth gradient animation (already referenced in container) */
+@keyframes tricolorShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 8px;
+  border-radius: 10px;
+  border: 5px solid #000000;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: #d10707;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
